@@ -11,3 +11,5 @@ From "Clienti"
 WHERE "Anno di Nascita" = '1982'
 
 -----ES3-----
+
+SELECT * FROM "Fatture" WHERE "Iva" = 20
