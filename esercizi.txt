@@ -46,3 +46,12 @@ FROM "Fatture"
 GROUP BY EXTRACT(YEAR FROM "DataFattura")
 ORDER BY anno;
 
+-----ES9-EXTRA-----
+
+SELECT EXTRACT(YEAR FROM "DataFattura") AS anno
+FROM "Fatture"
+WHERE "Tipologia" LIKE 'a%'
+GROUP BY EXTRACT(YEAR FROM "DataFattura")
+HAVING COUNT(*) >= 2
+
+-----ES10-EXTRA-----
