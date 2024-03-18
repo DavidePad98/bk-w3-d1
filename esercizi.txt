@@ -1,0 +1,5 @@
+-----ES1-----
+
+SELECT * FROM "Clienti" WHERE "Nome" = 'Mario'
+
+-----ES2-----
