@@ -55,3 +55,9 @@ GROUP BY EXTRACT(YEAR FROM "DataFattura")
 HAVING COUNT(*) >= 2
 
 -----ES10-EXTRA-----
+
+SELECT "Regioneresidenza", 
+SUM("Importo") AS totale_per_res
+FROM "Fatture"
+JOIN "Clienti" ON "IdCliente" = "NumeroCliente"
+GROUP BY "Regioneresidenza"
