@@ -36,3 +36,13 @@ FROM "Fatture"
 WHERE "Iva" = 20
 GROUP BY EXTRACT(YEAR FROM "DataFattura")
 ORDER BY anno;
+
+-----ES8-----
+
+SELECT EXTRACT(YEAR FROM "DataFattura") AS anno,
+       COUNT(*) AS numero_fatture,
+       SUM("Importo") AS tot
+FROM "Fatture"
+GROUP BY EXTRACT(YEAR FROM "DataFattura")
+ORDER BY anno;
+
