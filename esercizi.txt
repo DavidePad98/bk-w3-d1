@@ -27,3 +27,12 @@ SELECT *
 FROM "Fatture"
 JOIN "Clienti" ON "NumeroCliente" = "IdCliente"
 WHERE "Importo" < 1000;
+
+-----ES6-----
+-----ES7-----
+
+SELECT EXTRACT(YEAR FROM "DataFattura") AS anno, COUNT(*) AS numero_fatture
+FROM "Fatture"
+WHERE "Iva" = 20
+GROUP BY EXTRACT(YEAR FROM "DataFattura")
+ORDER BY anno;
