@@ -61,3 +61,11 @@ SUM("Importo") AS totale_per_res
 FROM "Fatture"
 JOIN "Clienti" ON "IdCliente" = "NumeroCliente"
 GROUP BY "Regioneresidenza"
+
+-----ES11-EXTRA-----
+
+SELECT COUNT(DISTINCT "NumeroCliente") AS numero_clienti
+FROM "Clienti"
+JOIN "Fatture" ON "NumeroCliente" = "IdCliente"
+WHERE "Anno di Nascita" <= 1980
+AND "Importo" > 50;
