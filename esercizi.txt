@@ -14,6 +14,10 @@ WHERE "Anno di Nascita" = '1982'
 
 SELECT * FROM "Fatture" WHERE "Iva" = 20
 
+SELECT COUNT(*) 
+FROM "Fatture" 
+WHERE "Iva" = 20
+
 -----ES4-----
 
 SELECT *
@@ -29,6 +33,11 @@ JOIN "Clienti" ON "NumeroCliente" = "IdCliente"
 WHERE "Importo" < 1000;
 
 -----ES6-----
+
+SELECT "NumeroFattura", "Iva", "DataFattura", "Importo" 
+FROM "Fatture" 
+JOIN "Fornitori" USING("NumeroFornitore")
+
 -----ES7-----
 
 SELECT EXTRACT(YEAR FROM "DataFattura") AS anno, COUNT(*) AS numero_fatture
