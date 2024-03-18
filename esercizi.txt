@@ -20,3 +20,10 @@ SELECT *
 FROM "Prodotti"
 WHERE EXTRACT(YEAR FROM "DataAttivazione") = 2017
 AND ("InProduzione" = 'si' OR "InCommercio" = 'si');
+
+-----ES5-----
+
+SELECT *
+FROM "Fatture"
+JOIN "Clienti" ON "NumeroCliente" = "IdCliente"
+WHERE "Importo" < 1000;
