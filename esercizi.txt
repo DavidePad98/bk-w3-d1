@@ -3,3 +3,11 @@
 SELECT * FROM "Clienti" WHERE "Nome" = 'Mario'
 
 -----ES2-----
+
+SELECT * FROM "Clienti" WHERE "Anno di Nascita" = '1982'
+
+SELECT "Nome", "Cognome"
+From "Clienti"
+WHERE "Anno di Nascita" = '1982'
+
+-----ES3-----
